@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { StoreHydration } from "@/providers/store-hydration";
 import { CartDrawer } from "@/components/ecommerce/cart-drawer";
@@ -56,6 +57,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
+      <GoogleTagManager gtmId="GTM-TXGBCLQM" />
       <body className="min-h-full flex flex-col antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <StoreHydration />
