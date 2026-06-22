@@ -1,0 +1,13 @@
+import type { MetadataRoute } from "next";
+import { siteConfig } from "@/constants/site";
+
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: {
+      userAgent: "*",
+      allow: "/",
+      disallow: ["/account", "/checkout", "/order-confirmation"],
+    },
+    sitemap: `${siteConfig.url}/sitemap.xml`,
+  };
+}

@@ -1,0 +1,58 @@
+import type { Category } from "@/types";
+
+export const categories: Category[] = [
+  {
+    id: "cat-audio",
+    slug: "audio",
+    name: "Audio",
+    description: "Headphones and speakers tuned for clarity.",
+    icon: "Headphones",
+    tone: "#E7ECF0",
+    toneDark: "#1F262B",
+  },
+  {
+    id: "cat-carry",
+    slug: "carry",
+    name: "Carry",
+    description: "Bags and travel goods built to last.",
+    icon: "Backpack",
+    tone: "#EFE8DA",
+    toneDark: "#2A2519",
+  },
+  {
+    id: "cat-wearables",
+    slug: "wearables",
+    name: "Wearables",
+    description: "Watches and rings, quietly engineered.",
+    icon: "Watch",
+    tone: "#ECEAE6",
+    toneDark: "#262420",
+  },
+  {
+    id: "cat-apparel",
+    slug: "apparel",
+    name: "Apparel",
+    description: "Everyday layers in natural fibers.",
+    icon: "Shirt",
+    tone: "#E8EDE6",
+    toneDark: "#20271F",
+  },
+  {
+    id: "cat-home",
+    slug: "home",
+    name: "Home",
+    description: "Lighting and objects for considered spaces.",
+    icon: "Lamp",
+    tone: "#F2EEE6",
+    toneDark: "#2A2620",
+  },
+  {
+    id: "cat-eyewear",
+    slug: "eyewear",
+    name: "Eyewear",
+    description: "Acetate frames, hand finished in Italy.",
+    icon: "Glasses",
+    tone: "#F3E9E7",
+    toneDark: "#2B2220",
+  },
+];
