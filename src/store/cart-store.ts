@@ -36,6 +36,7 @@ export const useCartStore = create<CartState>()(
           set({ items: [...get().items, { id, product, variant, quantity }] });
         }
         if (typeof window !== "undefined") {
+          console.log("ADD TO CART FIRED", product.name);
   window.dataLayer = window.dataLayer || [];
 
   window.dataLayer.push({
