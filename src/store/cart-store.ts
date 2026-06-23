@@ -35,6 +35,28 @@ export const useCartStore = create<CartState>()(
         } else {
           set({ items: [...get().items, { id, product, variant, quantity }] });
         }
+        if (typeof window !== "undefined") {
+  window.dataLayer = window.dataLayer || [];
+
+  window.dataLayer.push({
+    event: "add_to_cart",
+    ecommerce: {
+      currency: product.currency,
+      value: product.price * quantity,
+      items: [
+        {
+          item_id: product.id,
+          item_name: product.name,
+          item_brand: product.brand,
+          item_category: product.category,
+          item_variant: `${variant.color ?? ""}-${variant.size ?? ""}`,
+          price: product.price,
+          quantity,
+        },
+      ],
+    },
+  });
+}
         set({ isOpen: true });
       },
       removeItem: (id) => set({ items: get().items.filter((i) => i.id !== id) }),
